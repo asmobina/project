@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
     <link rel="stylesheet" href="assets/css/todoApp.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/isotope.pkgd.min.js" defer></script>    
     <script src="assets/js/todoApp.js" defer></script>
 </head>
+
 <body>
     <header class="container my-4">
         <h1>Todo List App</h1>
@@ -18,5 +21,15 @@
         <button class="add same">Add To List</button>
         <button class="clear same">Clear Todo List</button>
     </div>
+    <div class="container mt-5">
+        <div class="all-btn container">
+            <button data-filter="*" id="iso-btn" class="btn-back">All</button>
+            <button data-filter=".d2" id="iso-btn">Active</button>
+            <button data-filter=".d3" id="iso-btn">Completed</button>
+        </div>
+        <ul class="todo-ul mt-4">
+        </ul>
+    </div>
 </body>
+
 </html>

@@ -7,27 +7,28 @@
     <title>Todo App</title>
     <link rel="stylesheet" href="assets/css/todoApp.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
     <script src="assets/js/todoApp.js" defer></script>
 </head>
 
 <body>
-    <header class="container my-4">
-        <h1>Todo List App</h1>
-    </header>
-    <div class="container">
-        <label for="input-item" class="fw-bold">Add Item</label>
-        <input type="text" class="input-item">
-        <div class="input-btn"></div>
-    </div>
-    <div class="container mt-5">
-        <div class="container all-btn">
-            <button id="all" class="active">All</button>
-            <button id="Active">Active</button>
-            <button id="complete">Completed</button>
+    <div class="wrapper">
+        <div class="container">
+            <input type="text" class="input-item" placeholder="Add a new task" maxlength="20">
+            <div class="input-btn position-relative"></div>
         </div>
-        <ul class="todo-ul mt-4">
-        </ul>
+        <div class="container mt-3">
+            <div class="container all-btn">
+                <button id="all" class="active">All</button>
+                <button id="Active">Active</button>
+                <button id="complete">Completed</button>
+                <span class="clear same" onclick="cleartodo()">Clear All</span>
+            </div>          
+            <ul class="todo-ul mt-4 p-0">
+            </ul>
+        </div>
     </div>
+
 </body>
 
 </html>

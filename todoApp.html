@@ -7,7 +7,6 @@
     <title>Todo App</title>
     <link rel="stylesheet" href="assets/css/todoApp.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <script src="assets/js/isotope.pkgd.min.js" defer></script>    
     <script src="assets/js/todoApp.js" defer></script>
 </head>
 
@@ -18,14 +17,13 @@
     <div class="container">
         <label for="input-item" class="fw-bold">Add Item</label>
         <input type="text" class="input-item">
-        <button class="add same">Add To List</button>
-        <button class="clear same">Clear Todo List</button>
+        <div class="input-btn"></div>
     </div>
     <div class="container mt-5">
-        <div class="all-btn container">
-            <button data-filter="*" id="iso-btn" class="btn-back">All</button>
-            <button data-filter=".d2" id="iso-btn">Active</button>
-            <button data-filter=".d3" id="iso-btn">Completed</button>
+        <div class="container all-btn">
+            <button id="all" class="active">All</button>
+            <button id="Active">Active</button>
+            <button id="complete">Completed</button>
         </div>
         <ul class="todo-ul mt-4">
         </ul>

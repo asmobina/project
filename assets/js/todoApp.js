@@ -6,7 +6,6 @@ const filter = document.querySelectorAll(".all-btn button")
 
 inputBtn.innerHTML = `
         <button class="add same" onclick="addtodo()">Add To List</button>
-        <button class="clear same" onclick="cleartodo()">Clear Todo List</button>
 `
 
 //model
@@ -44,7 +43,6 @@ function editHandler(index) {
 
     inputBtn.innerHTML = `
         <button class="add same " onclick="editTodo(${index})">edit To List</button>
-        <button class="clear same" onclick="cleartodo()">Clear Todo List</button>
     `
 }
 
@@ -52,7 +50,6 @@ function editTodo(index) {
 
     inputBtn.innerHTML = `
     <button class="add same " onclick="addtodo()">add To List</button>
-    <button class="clear same" onclick="cleartodo()">Clear Todo List</button>
     `
     todos[index].name = input.value
     input.value = ""
@@ -65,9 +62,9 @@ function render(todos) {
         return `<li class="li-item">
         <sapn class="${item.isComplete ? "complete" : "incomplete"}">${item.name}</sapn>
         <div>
-        <button class="same comp " onclick="compleletHandler(${index})">${item.isComplete ? "InCompletet" : "Complete"}</button>
-        <button class="same delete" onclick="deleteHandler(${index})">Delete</button>
-        <button class="same edit" onclick="editHandler(${index})">Edit</button>
+        <button class="same comp m-0" onclick="compleletHandler(${index})"><i class="fa ${item.isComplete?"fa-times":"fa-check"}"></i></button>
+        <button class="same delete m-0" onclick="deleteHandler(${index})"><i class="fa fa-trash"></i></button>
+        <button class="same edit m-0" onclick="editHandler(${index})"><i class="fa fa-pencil"></i></button>
         </div> 
         </li>`
     })

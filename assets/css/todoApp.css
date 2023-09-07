@@ -1,25 +1,35 @@
-header {
-    text-align: center;
+body{
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom right,#fad7dd,#ffc0cb,#fda9b7,#f88b9d,#ff657f,#ff6680) !important;
+    height: 100vh;
+    overflow: hidden;
+}
+.wrapper{
+    max-width: 405px;
+    padding: 28px 0 30px;
+    margin: 250px auto;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 ul {
     list-style: none;
+    overflow-y: auto;
+    max-height: 300px;
 }
 
 .input-item {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    font-size: 14px;
     color: #555;
+    font-size: 18px;
     border: #e0e0e0 solid 1px;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .input-item:focus {
-    outline: 0;
-    border: #66afe9;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 1px solid #ff7088;
 }
 
 .same {
@@ -35,8 +45,11 @@ ul {
 }
 
 .add {
-    background-color: #428bca;
-    border: 1px solid #357ebd;
+    background-color: #ff7088;
+    border: 1px solid #ff627c;
+    position: absolute;
+    left: 59%;
+    transform: translate(51%, -158%);
 }
 
 .clear {
@@ -65,25 +78,30 @@ ul {
 .delete {
     background-color: #d9534f;
     border: 1px solid #d43f3a;
+    margin: 0 10px 0 ;
 }
-
-.incomplete{
+.edit{
+    background-color: #ff7088;
+    border: 1px solid #ff627c;
+    margin: 0 10px 0 ;
+}
+.complete{
     text-decoration: line-through;
     color: #767676;
 }
 .all-btn{
-    text-align: center;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
-#iso-btn{
-    border: 1px solid #d8dae8;
-    padding: 12px 30px;
-    font-size: 18px;
+.all-btn button{
+    border: none;
     background-color: transparent;
     border-radius: 100px;
-    margin: 10px 10px;
+    margin:0 5px;
     font-weight: 600;
 }
-.btn-back{
-    background-color: #ffdfed !important;
+.active{
+    color: #ff7088;
 }
